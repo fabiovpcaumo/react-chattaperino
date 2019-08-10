@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "./styles";
 
-function ActionButton({ isPrimary }) {
-  const [content, setContent] = useState("akasjdajsidjas");
-
+function ActionButton({ isPrimary, defaultText = "Default Button" }) {
   return (
     <div>
-      <Button isPrimary={isPrimary}> {content} </Button>
+      <Button isPrimary={isPrimary}> {defaultText} </Button>
     </div>
   );
 }

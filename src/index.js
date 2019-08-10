@@ -1,20 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Form, Input } from "unform";
 import MessageBox from "./components/MessageBox";
 import ActionButton from "./components/ActionButton";
-import LoginPage from "./pages/LoginPage";
+import LoginPanel from "./components/LoginPanel";
 
 import "./styles.css";
 
 function App() {
+  function handleSubmit(data) {
+    return true;
+  }
+
   return (
-    //<div className="App">
-    //  <h1>Hello CodeSandbox</h1>
-    // <MessageBox />
-    //<ActionButton isPrimary />
-    //<ActionButton />
-    //</div>
-    <LoginPage />
+    <div className="App">
+      <LoginPanel />
+    </div>
   );
 }
 
