@@ -1,10 +1,13 @@
 import React from "react";
 import { Button } from "./styles";
 
-function ActionButton({ isPrimary, defaultText = "Default Button" }) {
+function ActionButton({ isPrimary, defaultText = "Default Button", action }) {
   return (
     <div>
-      <Button isPrimary={isPrimary}> {defaultText} </Button>
+      <Button isPrimary={isPrimary} onClick={() => action()}>
+        {" "}
+        {defaultText}{" "}
+      </Button>
     </div>
   );
 }

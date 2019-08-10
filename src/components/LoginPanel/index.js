@@ -4,7 +4,9 @@ import { LoginForm } from "./styles";
 import ActionButton from "../ActionButton";
 
 function LoginPanel() {
-  function handleSubmit(data) {}
+  function handleSubmit(data) {
+    console.log(data);
+  }
 
   return (
     <div>
@@ -12,10 +14,8 @@ function LoginPanel() {
         <Input name="email" />
         <Input name="password" type="password" />
       </LoginForm>
-      <div>
-        <ActionButton isPrimary defaultText="Login" />
-        <ActionButton defaultText="Cadastrar" />
-      </div>
+      <ActionButton isPrimary defaultText="Login" />
+      <ActionButton defaultText="Cadastrar" />
     </div>
   );
 }
